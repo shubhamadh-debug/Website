@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
-import AIInsightPanel from '../components/AIInsightPanel';
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -70,24 +69,25 @@ const ProjectDetail: React.FC = () => {
           />
         </section>
 
-        <section className="grid md:grid-cols-12 gap-12 mb-24">
-          <div className="md:col-span-8">
+        <section className={`mb-24 ${project.awards ? 'grid md:grid-cols-12 gap-12' : 'max-w-4xl'}`}>
+          <div className={project.awards ? 'md:col-span-8' : ''}>
             <h3 className="text-xs uppercase tracking-widest font-bold mb-6 text-neutral-400">Project Brief & Concept</h3>
-            <p className="text-2xl md:text-3xl font-light leading-relaxed text-neutral-800">
+            <p className="text-lg md:text-xl font-light leading-relaxed text-neutral-800 whitespace-pre-line">
               {project.description}
             </p>
           </div>
-          <div className="md:col-span-4">
-            <h3 className="text-xs uppercase tracking-widest font-bold mb-6 text-neutral-400">Inquiry</h3>
-            <ul className="text-sm space-y-4 text-neutral-500">
-              {project.specifications.materials.map(m => (
-                <li key={m} className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-neutral-300 rounded-full mr-3"></span>
-                  {m}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {project.awards && (
+            <div className="md:col-span-4 pt-12 md:pt-0">
+              <h3 className="text-xs uppercase tracking-widest font-bold mb-6 text-neutral-400">Awards & Recognition</h3>
+              <ul className="space-y-6">
+                {project.awards.map((award, idx) => (
+                  <li key={idx} className="text-sm font-medium text-neutral-900 border-l-2 border-neutral-200 pl-4 py-1 italic leading-snug">
+                    {award}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
@@ -97,8 +97,6 @@ const ProjectDetail: React.FC = () => {
             </div>
           ))}
         </section>
-
-        <AIInsightPanel project={project} />
       </div>
     </div>
   );

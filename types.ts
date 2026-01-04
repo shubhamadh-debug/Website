@@ -9,6 +9,7 @@ export interface Project {
   images: string[];
   description: string;
   label: string;
+  awards?: string[];
   specifications: {
     area: string;
     materials: string[];

@@ -10,48 +10,90 @@ const About: React.FC = () => {
             <h1 className="text-6xl md:text-9xl font-serif tracking-tighter mb-12">Shubham <span className="italic text-neutral-400">Adhikari</span></h1>
             <div className="space-y-8 text-lg text-neutral-600 leading-relaxed">
               <p>
-                Currently an architectural candidate at the Global University of Design. My work explores the intersection of community-centric design, social equity, and architectural innovation.
+                I am a Graduate Architect currently pursuing a Masters in Architecture at Clemson University. With a professional foundation as a Principal and Senior Architect in Nepal, my practice bridges technical precision with empathetic, community-focused design.
               </p>
               <p>
-                I am driven by the belief that design should serve as a catalyst for positive social change. My process involves deep contextual research and a commitment to creating sustainable spaces that empower the people who inhabit them.
+                My work explores the intersections of architecture and resilience, ranging from large-scale hospitality projects to intricate material research. I am dedicated to creating spaces that foster social equity and ecological harmony through thoughtful, site-sensitive interventions.
               </p>
             </div>
 
-            <div className="mt-20 space-y-12">
-              <div>
-                <h3 className="text-xs uppercase tracking-[0.3em] font-bold mb-6 text-neutral-300">Education</h3>
-                <div className="space-y-4">
-                  <div>
-                    <p className="text-neutral-900 font-medium">B.Arch (Honors)</p>
-                    <p className="text-sm text-neutral-500 italic">Global University of Design, 2020 — 2024</p>
+            <div className="mt-20 space-y-16">
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-neutral-300">Education</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <p className="text-neutral-900 font-medium">Masters in Architecture</p>
+                      <p className="text-sm text-neutral-500">Clemson University, SC</p>
+                      <p className="text-xs text-neutral-400 italic">2024 — Present</p>
+                    </div>
+                    <div>
+                      <p className="text-neutral-900 font-medium">Bachelor's in Architecture</p>
+                      <p className="text-sm text-neutral-500">Kathmandu Engineering College, Nepal</p>
+                      <p className="text-xs text-neutral-400 italic">2014 — 2019</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-neutral-900 font-medium">Summer Lab: Urban Inclusivity</p>
-                    <p className="text-sm text-neutral-500 italic">Design for All Workshop, 2022</p>
+                </div>
+
+                <div>
+                  <h3 className="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-neutral-300">Experience</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <p className="text-neutral-900 font-medium font-serif italic text-lg leading-tight">Gresham Smith</p>
+                      <p className="text-xs text-neutral-400 uppercase tracking-widest mt-1">2024 Summer</p>
+                    </div>
+                    <div>
+                      <p className="text-neutral-900 font-medium font-serif italic text-lg leading-tight">Rootnine Design Pvt. Ltd</p>
+                      <p className="text-xs text-neutral-400 uppercase tracking-widest mt-1">2020 — Present</p>
+                    </div>
+                    <div>
+                      <p className="text-neutral-900 font-medium font-serif italic text-lg leading-tight">Zero Dia Design Pvt. Ltd</p>
+                      <p className="text-xs text-neutral-400 uppercase tracking-widest mt-1">2020 — 2024</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-xs uppercase tracking-[0.3em] font-bold mb-6 text-neutral-300">Technical Skills</h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 text-sm text-neutral-600">
-                  <p>Rhino + Grasshopper</p>
-                  <p>Revit</p>
-                  <p>V-Ray / Enscape</p>
-                  <p>Adobe Creative Cloud</p>
-                  <p>ArcGIS</p>
-                  <p>Community Mapping</p>
+              <div className="grid md:grid-cols-2 gap-12">
+                <div>
+                  <h3 className="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-neutral-300">Technical Expertise</h3>
+                  <div className="grid grid-cols-2 gap-y-4 gap-x-4 text-[11px] uppercase tracking-widest text-neutral-600">
+                    <p>AutoCAD</p>
+                    <p>Revit</p>
+                    <p>Sketchup</p>
+                    <p>Rhino</p>
+                    <p>Lumion</p>
+                    <p>V-Ray</p>
+                    <p>D5 Render</p>
+                    <p>Adobe CC</p>
+                    <p>GIS</p>
+                    <p>MS Office</p>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xs uppercase tracking-[0.3em] font-bold mb-8 text-neutral-300">Languages</h3>
+                  <div className="space-y-4 text-sm text-neutral-600">
+                    <p className="flex justify-between border-b border-neutral-100 pb-2"><span>Nepali</span> <span className="text-neutral-300 italic">Native</span></p>
+                    <p className="flex justify-between border-b border-neutral-100 pb-2"><span>English</span> <span className="text-neutral-300 italic">Fluent</span></p>
+                    <p className="flex justify-between border-b border-neutral-100 pb-2"><span>Hindi</span> <span className="text-neutral-300 italic">Conversational</span></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="md:col-span-5">
             <div className="sticky top-32">
-              <img src="https://images.unsplash.com/photo-1519085185758-299837359ecd?auto=format&fit=crop&q=80&w=800&h=1200" alt="Profile" className="w-full grayscale brightness-90 hover:brightness-100 transition-all duration-700" />
-              <div className="mt-8 p-6 bg-neutral-100 border-l-4 border-neutral-900">
-                <p className="text-xs uppercase tracking-widest font-bold mb-2">Open for Opportunities</p>
-                <p className="text-xs text-neutral-500 leading-relaxed italic">
-                  Passionate about community development and innovative housing solutions. Seeking roles where design makes a tangible difference.
+              <div className="aspect-[3/4] bg-neutral-200 overflow-hidden grayscale brightness-90 border border-neutral-200">
+                <img 
+                  src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800" 
+                  alt="Portrait" 
+                  className="w-full h-full object-cover opacity-80" 
+                />
+              </div>
+              <div className="mt-8 p-8 bg-white border border-neutral-100 shadow-sm">
+                <p className="text-xs uppercase tracking-widest font-bold mb-4 text-neutral-900">Current Status</p>
+                <p className="text-sm text-neutral-500 leading-relaxed italic">
+                  Graduate Architect | Pursuing M.Arch at Clemson University.
                 </p>
               </div>
             </div>
