@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
 							</p>
 							<div className='flex flex-col'>
 								<a
-									href='linkedin.com/in/shubhamadh'
+									href='https://linkedin.com/in/shubhamadh'
 									target='_blank'
 									rel='noopener noreferrer'
 									className='hover:text-neutral-900 transition-colors'
