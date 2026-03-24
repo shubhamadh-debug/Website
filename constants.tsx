@@ -73,6 +73,41 @@ export const PROJECTS: Project[] = [
 		},
 	},
 	{
+		id: 'thimi-2021',
+		title: 'THIMI RESIDENCE',
+		category: 'Residential',
+		year: '2021',
+		location: 'Bhaktapur, Nepal',
+		label: 'Professional Work',
+		thumbnail: 'assets/thimi/thimi.jpg', // Replace with your sixth image path
+		images: [
+			'assets/thimi/thimi.jpg',
+			'assets/thimi/1.jpg',
+			'assets/thimi/2.jpg',
+			'assets/thimi/3.jpg',
+			'assets/thimi/4.jpg',
+			'assets/thimi/5.jpg',
+			'assets/thimi/6.jpg',
+			'assets/thimi/7.jpg',
+			'assets/thimi/8.jpg',
+			'assets/thimi/9.jpg',
+			'assets/thimi/10.jpg',
+			'assets/thimi/11.jpg',
+		],
+		description: `Located in the heart of New Thimi, Bhaktapur, the Thimi Residence is the project that is undoubtedly closest to my heart. Following my undergraduate studies, this was my first experience managing a design-build project, and it was uniquely personal because the clients were my own parents, and the structure would become our family home. The site itself posed a creative challenge, situated on a small plot of land where every inch counted.\n\n
+Architecturally, I approached the form of the building as a composition of different, intersecting planes. This concept allowed me to introduce strategic projections; these elements aren't just for a modern aesthetic but serve as crucial functional shading for the windows and balconies, while also emphasizing a clean, dynamic interplay of horizontal and vertical lines. The final look—as seen in the 3D visualization—balances these elements with a material palette of warm wood and textured concrete.\n\n
+I was fully immersed in this project from the very beginning, designing the complete package from the exterior architecture to the nuanced interior details. However, this was more than just a design exercise. Living and working on the design-build meant I was present for the entire construction process. It was an invaluable learning curve, teaching me firsthand about material selection, manpower management, scheduling, budgeting, and rigorous on-site supervision. The Thimi Residence is not just a house I built; it’s the place where I truly learned the full cycle of architectural execution.
+`,
+		// TODO: CHANGE specifications AS REQUIRED
+		specifications: {
+			area: '0000 sqm',
+			materials: ['Hand-molded Brick', 'Industrial Steel', 'Timber Decking'],
+			course: 'Professional Practice',
+			institution: 'Rootnine Design Pvt. Ltd.',
+			instructor: 'Shubham Adhikari',
+		},
+	},
+	{
 		id: 'nagarkot-resort-2022',
 		title: 'NAGARKOT RESORT',
 		category: 'Hospitality',
@@ -97,6 +132,73 @@ export const PROJECTS: Project[] = [
 			course: 'Professional Practice',
 			institution: 'Zero Dia Nepal Pvt. Ltd.',
 			instructor: 'Ar. Toran Prasad Pandit',
+		},
+	},
+	{
+		id: 'mega-residence-2022',
+		title: 'MEGA RESIDENCE',
+		category: 'Hospitality',
+		year: '2022',
+		location: 'Kathmandu, Nepal',
+		label: 'Professional work',
+		thumbnail: 'assets/mega/mega.jpg', // Replace with your third image path
+		images: [
+			'assets/mega/mega.jpg',
+			'assets/mega/1.jpg',
+			'assets/mega/2.jpg',
+			'assets/mega/3.jpg',
+			'assets/mega/4.jpg',
+			'assets/mega/5.jpg',
+			'assets/mega/6.jpg',
+			'assets/mega/7.jpg',
+			'assets/mega/8.jpg',
+			'assets/mega/9.jpg',
+			'assets/mega/10.jpg',
+		],
+		description: `The Mega Residence in Jhamsikhel is a great example of how modern design can still feel warm and grounded. The building uses a "planar" approach, where thick, overhanging slabs and vertical stone walls intersect to create a really dynamic, layered look. These deep overhangs aren't just for style—they provide natural shading for the huge floor-to-ceiling windows that wrap around the living spaces. By mixing the rugged texture of natural stone with the warmth of horizontal wood patterns, we were able to give the exterior a natural, organic feel that softens the bold geometry.\n\n
+I was heavily involved across several stages of the project, contributing to the initial planning and technical detailing, as well as leading the 3D modeling and final visualization to bring the design’s unique material harmony to life.
+`,
+		specifications: {
+			area: '8,000 sqm',
+			materials: ['White Render', 'Stone Masonry', 'Glass Ribbons'],
+			course: 'Professional Practice',
+			institution: 'Rootnine Design Pvt. Ltd.',
+			instructor: 'Shubham Adhikari',
+		},
+	},
+	{
+		id: 'devghat-farmhouse-2023',
+		title: 'DEVGHAT FARMHOUSE / RESORT',
+		category: 'Hospitality',
+		year: '2023',
+		location: 'Gandaki, Nepal',
+		label: 'Professional work',
+		thumbnail: 'assets/devghat/devghat.jpg', // Replace with your third image path
+		images: [
+			'assets/devghat/devghat.jpg',
+			'assets/devghat/1.jpg',
+			'assets/devghat/2.jpg',
+			'assets/devghat/3.jpg',
+			'assets/devghat/4.jpg',
+			'assets/devghat/5.jpg',
+			'assets/devghat/6.jpg',
+			'assets/devghat/7.jpg',
+			'assets/devghat/8.jpg',
+			'assets/devghat/9.jpg',
+			'assets/devghat/10.jpg',
+			'assets/devghat/11.jpg',
+		],
+		description: `Located on the banks of the Narayani River in Devghat, Gandaki, Nepal- the Devghat Farmhouse/Resort is a unique project designed to harmonize with the dramatic site contour. The client envisioned a versatile complex that could function as both a private family farmhouse and a semi-commercial hotel, necessitating a series of separate, self-contained unit blocks.\n\n
+Our core architectural concept was to literally and figuratively project these living spaces from the steeply sloped terrain. This dramatic, projected geometry not only minimizes the building's footprint on the natural site but also creates stunning, cantilevered volumes that float above the landscape. Encased in large, floor-to-ceiling windows, each unit is positioned to frame panoramic, east-facing views across the broad Narayani River and towards the distant hills, ensuring every guest experiences the site’s breathtaking beauty.\n\n
+This projecting form left a substantial, underutilized space beneath. We turned this challenge into a key feature, designing a beautiful swimming pool and a sunbathing area directly below the units. This not only makes efficient use of the vertical space but also creates a covered, private oasis for recreational activity, perfect for either family downtime or resort guests.\n\n
+My role on this project was extensive, and I was deeply involved from the very beginning. I led the initial client consultation and survey process to understand the land’s complexities. From there, I moved into the planning and designing phases, and finally, created the 3D visualization to bring the complete vision of these cantilevered spaces and their relationship to the river and the pool to life.
+`,
+		specifications: {
+			area: '8,000 sqm',
+			materials: ['White Render', 'Stone Masonry', 'Glass Ribbons'],
+			course: 'Professional Practice',
+			institution: 'Rootnine Design Pvt. Ltd.',
+			instructor: 'Shubham Adhikari',
 		},
 	},
 	{
