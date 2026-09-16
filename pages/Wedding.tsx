@@ -135,7 +135,8 @@ const Wedding: React.FC = () => {
 
 	const pullProgress = clamp((progress - 0.22) / 0.68);
 	const letterTranslateY = 74 - 82 * pullProgress;
-	const letterScale = 0.82 + 0.24 * pullProgress;
+	const letterScale = 0.05 + 1.01 * pullProgress;
+	const letterOpacity = clamp(pullProgress / 0.06);
 
 	const envelopeOpacity = 1 - clamp((progress - 0.82) / 0.18);
 	const hintOpacity = 1 - clamp(progress / 0.12);
@@ -201,11 +202,9 @@ const Wedding: React.FC = () => {
 					width: 100%;
 					aspect-ratio: 3 / 2;
 					border-radius: 16px;
-					background: var(--clay);
-					box-shadow: 0 30px 60px -28px rgba(60, 30, 15, 0.55);
-					opacity: ${envelopeOpacity};
+					background: rgba(193, 123, 87, ${envelopeOpacity});
+					box-shadow: 0 30px 60px -28px rgba(60, 30, 15, ${0.55 * envelopeOpacity});
 					overflow: visible;
-					z-index: 1;
 				}
 				.wi-envelope-pocket {
 					position: absolute;
@@ -214,7 +213,7 @@ const Wedding: React.FC = () => {
 					width: 100%;
 					height: 66%;
 					border-radius: 0 0 16px 16px;
-					background: var(--clay-dark);
+					background: rgba(156, 92, 63, ${envelopeOpacity});
 					z-index: 3;
 				}
 				.wi-envelope-flap {
@@ -263,7 +262,9 @@ const Wedding: React.FC = () => {
 					display: flex;
 					flex-direction: column;
 					overflow: hidden;
+					transform-origin: 50% 15%;
 					transform: translate(-50%, ${letterTranslateY}%) scale(${letterScale});
+					opacity: ${letterOpacity};
 					border: 1px solid rgba(0,0,0,0.04);
 				}
 				.wi-letter-photo {
