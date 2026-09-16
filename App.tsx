@@ -1,23 +1,28 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import ProjectDetail from './pages/ProjectDetail';
 import About from './pages/Studio'; // Using Studio.tsx as the About page
 import Contact from './pages/Contact';
+import Wedding from './pages/Wedding';
 
-const App: React.FC = () => {
+const PortfolioChrome: React.FC = () => {
+	const location = useLocation();
+	const isImmersivePage = location.pathname === '/wedding';
+
 	return (
-		<Router>
-			<div className='min-h-screen bg-neutral-50 selection:bg-neutral-900 selection:text-white'>
-				<Navigation />
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/project/:id' element={<ProjectDetail />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/contact' element={<Contact />} />
-				</Routes>
+		<>
+			{!isImmersivePage && <Navigation />}
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/project/:id' element={<ProjectDetail />} />
+				<Route path='/about' element={<About />} />
+				<Route path='/contact' element={<Contact />} />
+				<Route path='/wedding' element={<Wedding />} />
+			</Routes>
 
+			{!isImmersivePage && (
 				<footer className='bg-neutral-900 text-white py-20 mt-20'>
 					<div className='max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-end'>
 						<div>
@@ -42,6 +47,16 @@ const App: React.FC = () => {
 						</div>
 					</div>
 				</footer>
+			)}
+		</>
+	);
+};
+
+const App: React.FC = () => {
+	return (
+		<Router>
+			<div className='min-h-screen bg-neutral-50 selection:bg-neutral-900 selection:text-white'>
+				<PortfolioChrome />
 			</div>
 		</Router>
 	);
