@@ -262,32 +262,42 @@ const Wedding: React.FC = () => {
 					z-index: 2;
 					display: flex;
 					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					text-align: center;
-					padding: 10% 8%;
+					overflow: hidden;
 					transform: translate(-50%, ${letterTranslateY}%) scale(${letterScale});
 					border: 1px solid rgba(0,0,0,0.04);
+				}
+				.wi-letter-photo {
+					flex: 1 1 60%;
+					min-height: 0;
+					background-image: url('assets/wedding/couple.jpg');
+					background-size: cover;
+					background-position: center 78%;
+				}
+				.wi-letter-text {
+					flex: 0 0 auto;
+					padding: 7% 8% 9%;
+					text-align: center;
+					background: var(--paper);
 				}
 				.wi-letter-eyebrow {
 					font-size: 11px;
 					letter-spacing: 0.35em;
 					text-transform: uppercase;
 					color: var(--clay);
-					margin-bottom: 14px;
+					margin-bottom: 12px;
 				}
 				.wi-letter-title {
 					font-family: var(--font-display);
 					font-weight: 500;
-					font-size: clamp(28px, 7vw, 38px);
+					font-size: clamp(24px, 6vw, 32px);
 					line-height: 1.08;
 					color: var(--ink);
 				}
 				.wi-letter-date {
-					margin-top: 16px;
+					margin-top: 12px;
 					font-family: var(--font-display);
 					font-style: italic;
-					font-size: clamp(16px, 4.4vw, 20px);
+					font-size: clamp(14px, 3.8vw, 18px);
 					color: var(--muted);
 					letter-spacing: 0.05em;
 				}
@@ -567,9 +577,12 @@ const Wedding: React.FC = () => {
 					<p className='wi-eyebrow-top'>Save the Date</p>
 					<div className='wi-scene'>
 						<div className='wi-letter'>
-							<p className='wi-letter-eyebrow'>You're Invited</p>
-							<h1 className='wi-letter-title'>Welcome to Our Wedding</h1>
-							<p className='wi-letter-date'>25th of November</p>
+							<div className='wi-letter-photo' role='img' aria-label='The two of us' />
+							<div className='wi-letter-text'>
+								<p className='wi-letter-eyebrow'>You're Invited</p>
+								<h1 className='wi-letter-title'>Welcome to Our Wedding</h1>
+								<p className='wi-letter-date'>25th of November</p>
+							</div>
 						</div>
 						<div className='wi-envelope'>
 							<div className='wi-envelope-pocket' />
