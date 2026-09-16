@@ -415,24 +415,11 @@ const WeddingDayGuest: React.FC = () => {
 					padding: 32px 26px;
 					text-align: left;
 				}
-				.wi-card-title {
-					font-family: var(--font-display);
-					font-size: 24px;
-					font-weight: 500;
-					color: var(--ink);
-				}
-				.wi-card-copy {
-					margin-top: 10px;
-					font-size: 14px;
-					line-height: 1.7;
-					color: var(--muted);
-					font-weight: 300;
-				}
 
 				.wi-address-block {
-					margin-top: 22px;
-					padding-top: 20px;
-					border-top: 1px solid rgba(122, 138, 153, 0.25);
+					margin: 0;
+					padding: 0;
+					border-top: none;
 				}
 				.wi-address-label {
 					font-size: 11px;
@@ -600,10 +587,6 @@ const WeddingDayGuest: React.FC = () => {
 						Nestled in the wooded landscape facing Lake Eufaula.
 					</p>
 					<div className='wi-card'>
-						<p className='wi-card-title'>Where to Go</p>
-						<p className='wi-card-copy'>
-							Please plan to arrive a little early to find parking and take your seat.
-						</p>
 						<div className='wi-address-block'>
 							<p className='wi-address-label'>Address</p>
 							<p className='wi-address'>
