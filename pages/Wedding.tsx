@@ -60,16 +60,35 @@ const Divider: React.FC = () => (
 	</div>
 );
 
-const ITINERARY = [
+type ItineraryDay = {
+	day: string;
+	title: string;
+	copy: string;
+	note?: string;
+	schedule?: { time: string; event: string }[];
+	extras?: string[];
+};
+
+const ITINERARY: ItineraryDay[] = [
 	{
 		day: 'Nov 24',
-		title: 'Check In',
-		copy: 'Arrive and settle in. Check-in from 3:00 PM to 11:00 PM.',
+		title: 'Welcome to The Lucas',
+		copy: 'We welcome you to Lakefront Retreat: The Lucas, nestled in the wooded landscape facing Lake Eufaula.',
+		note: 'Check-In: 3:00 PM – 11:00 PM',
 	},
 	{
 		day: 'Nov 25',
 		title: 'The Wedding Day',
 		copy: "The day we've been waiting for. Join us as we say “I do.”",
+		schedule: [
+			{ time: '10:00 AM', event: 'All bridesmaids are welcome to join the Ala ceremony for the bride and groom.' },
+			{ time: '10:30 AM', event: "Let's gather for the photoshoot." },
+			{ time: '11:00 AM', event: 'Wedding ceremony begins with Buddha Puja, followed by paper signing.' },
+		],
+		extras: [
+			'Lunch will be served with mouthwatering dishes and delicacies.',
+			'Games, music, dance, and unlimited entertainment to follow!',
+		],
 	},
 	{
 		day: 'Nov 26',
@@ -202,7 +221,7 @@ const Wedding: React.FC = () => {
 					width: 100%;
 					aspect-ratio: 3 / 2;
 					border-radius: 16px;
-					background: rgba(155, 17, 30, ${envelopeOpacity});
+					background: rgba(201, 162, 39, ${envelopeOpacity});
 					box-shadow: 0 30px 60px -28px rgba(20, 20, 24, ${0.55 * envelopeOpacity});
 					overflow: visible;
 				}
@@ -213,7 +232,7 @@ const Wedding: React.FC = () => {
 					width: 100%;
 					height: 66%;
 					border-radius: 0 0 16px 16px;
-					background: rgba(124, 14, 24, ${envelopeOpacity});
+					background: rgba(156, 122, 30, ${envelopeOpacity});
 					z-index: 3;
 				}
 				.wi-envelope-flap {
@@ -222,7 +241,7 @@ const Wedding: React.FC = () => {
 					left: 0;
 					width: 100%;
 					height: 46%;
-					background: var(--clay-dark);
+					background: #9c7a1e;
 					border-radius: 16px 16px 0 0;
 					clip-path: polygon(0 0, 100% 0, 50% 100%);
 					transform-origin: top center;
@@ -238,7 +257,7 @@ const Wedding: React.FC = () => {
 					width: 38px;
 					height: 38px;
 					transform: translate(-50%, -50%);
-					background: var(--gold);
+					background: var(--clay);
 					border-radius: 50%;
 					display: flex;
 					align-items: center;
@@ -420,6 +439,42 @@ const Wedding: React.FC = () => {
 					line-height: 1.65;
 					color: var(--muted);
 					font-weight: 300;
+				}
+				.wi-schedule {
+					margin-top: 14px;
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+				}
+				.wi-schedule-row {
+					display: grid;
+					grid-template-columns: 72px 1fr;
+					gap: 10px;
+					font-size: 13px;
+					line-height: 1.6;
+				}
+				.wi-schedule-time {
+					font-weight: 600;
+					color: var(--clay);
+					white-space: nowrap;
+				}
+				.wi-schedule-event {
+					color: var(--ink);
+					font-weight: 300;
+				}
+				.wi-timeline-extra {
+					margin-top: 12px;
+					font-size: 14px;
+					line-height: 1.65;
+					color: var(--muted);
+					font-weight: 300;
+				}
+				.wi-timeline-note {
+					margin-top: 12px;
+					font-size: 13px;
+					font-weight: 500;
+					letter-spacing: 0.02em;
+					color: var(--clay);
 				}
 
 				.wi-card {
@@ -612,6 +667,20 @@ const Wedding: React.FC = () => {
 								<div>
 									<p className='wi-timeline-title'>{item.title}</p>
 									<p className='wi-timeline-copy'>{item.copy}</p>
+									{item.schedule && (
+										<div className='wi-schedule'>
+											{item.schedule.map((s) => (
+												<div className='wi-schedule-row' key={s.time}>
+													<span className='wi-schedule-time'>{s.time}</span>
+													<span className='wi-schedule-event'>{s.event}</span>
+												</div>
+											))}
+										</div>
+									)}
+									{item.extras?.map((line, i) => (
+										<p className='wi-timeline-extra' key={i}>{line}</p>
+									))}
+									{item.note && <p className='wi-timeline-note'>{item.note}</p>}
 								</div>
 							</div>
 						))}
