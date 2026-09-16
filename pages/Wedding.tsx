@@ -145,14 +145,14 @@ const Wedding: React.FC = () => {
 		<div className='wi-root'>
 			<style>{`
 				.wi-root {
-					--ink: #2e2a25;
-					--muted: #8c8172;
-					--paper: #faf3e6;
-					--paper-deep: #f2e7d4;
-					--clay: #c17b57;
-					--clay-dark: #9c5c3f;
-					--gold: #c9a468;
-					--sage: #6c7a5c;
+					--ink: #2d4c6b;
+					--muted: #7a8a99;
+					--paper: #f2f3f4;
+					--paper-deep: #c7c7c7;
+					--clay: #9b111e;
+					--clay-dark: #7c0e18;
+					--gold: #556b2f;
+					--sage: #556b2f;
 					--font-display: 'Cormorant Garamond', serif;
 					--font-sans: 'Jost', 'Inter', sans-serif;
 					background: var(--paper);
@@ -164,7 +164,7 @@ const Wedding: React.FC = () => {
 				.wi-stage-section {
 					position: relative;
 					height: 300vh;
-					background: linear-gradient(180deg, #efe3cd 0%, var(--paper) 78%);
+					background: linear-gradient(180deg, #e3e5e7 0%, var(--paper) 78%);
 				}
 				.wi-stage-sticky {
 					position: sticky;
@@ -202,8 +202,8 @@ const Wedding: React.FC = () => {
 					width: 100%;
 					aspect-ratio: 3 / 2;
 					border-radius: 16px;
-					background: rgba(193, 123, 87, ${envelopeOpacity});
-					box-shadow: 0 30px 60px -28px rgba(60, 30, 15, ${0.55 * envelopeOpacity});
+					background: rgba(155, 17, 30, ${envelopeOpacity});
+					box-shadow: 0 30px 60px -28px rgba(20, 20, 24, ${0.55 * envelopeOpacity});
 					overflow: visible;
 				}
 				.wi-envelope-pocket {
@@ -213,7 +213,7 @@ const Wedding: React.FC = () => {
 					width: 100%;
 					height: 66%;
 					border-radius: 0 0 16px 16px;
-					background: rgba(156, 92, 63, ${envelopeOpacity});
+					background: rgba(124, 14, 24, ${envelopeOpacity});
 					z-index: 3;
 				}
 				.wi-envelope-flap {
@@ -243,7 +243,7 @@ const Wedding: React.FC = () => {
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					box-shadow: 0 6px 14px rgba(60, 30, 15, 0.35);
+					box-shadow: 0 6px 14px rgba(20, 20, 24, 0.35);
 					z-index: 5;
 					opacity: ${envelopeOpacity};
 				}
@@ -257,7 +257,7 @@ const Wedding: React.FC = () => {
 					height: 84%;
 					background: var(--paper);
 					border-radius: 12px;
-					box-shadow: 0 35px 70px -30px rgba(40, 20, 10, 0.45);
+					box-shadow: 0 35px 70px -30px rgba(20, 20, 24, 0.45);
 					z-index: 2;
 					display: flex;
 					flex-direction: column;
@@ -380,7 +380,7 @@ const Wedding: React.FC = () => {
 				.wi-divider span {
 					flex: 1;
 					height: 1px;
-					background: rgba(140, 129, 114, 0.35);
+					background: rgba(122, 138, 153, 0.35);
 				}
 				.wi-divider-heart { width: 14px; height: 14px; color: var(--clay); flex: none; }
 
@@ -397,7 +397,7 @@ const Wedding: React.FC = () => {
 					gap: 16px;
 					align-items: baseline;
 					padding-bottom: 24px;
-					border-bottom: 1px solid rgba(140, 129, 114, 0.2);
+					border-bottom: 1px solid rgba(122, 138, 153, 0.2);
 				}
 				.wi-timeline-row:last-child { border-bottom: none; padding-bottom: 0; }
 				.wi-timeline-day {
@@ -462,7 +462,7 @@ const Wedding: React.FC = () => {
 				.wi-address-block {
 					margin-top: 22px;
 					padding-top: 20px;
-					border-top: 1px solid rgba(140, 129, 114, 0.25);
+					border-top: 1px solid rgba(122, 138, 153, 0.25);
 				}
 				.wi-address-label {
 					font-size: 11px;
@@ -488,8 +488,8 @@ const Wedding: React.FC = () => {
 					gap: 10px;
 					margin-top: 20px;
 					padding: 10px 18px;
-					background: rgba(108, 122, 92, 0.12);
-					border: 1px solid rgba(108, 122, 92, 0.3);
+					background: rgba(85, 107, 47, 0.12);
+					border: 1px solid rgba(85, 107, 47, 0.3);
 					border-radius: 999px;
 					font-size: 12px;
 					letter-spacing: 0.08em;
@@ -530,7 +530,7 @@ const Wedding: React.FC = () => {
 				.wi-note {
 					margin-top: 32px;
 					text-align: left;
-					background: #fffaf0;
+					background: #f7f8f8;
 					border-left: 3px solid var(--gold);
 					border-radius: 4px 14px 14px 4px;
 					padding: 24px 22px;
