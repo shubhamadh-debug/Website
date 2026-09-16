@@ -6,10 +6,13 @@ import ProjectDetail from './pages/ProjectDetail';
 import About from './pages/Studio'; // Using Studio.tsx as the About page
 import Contact from './pages/Contact';
 import Wedding from './pages/Wedding';
+import WeddingDayGuest from './pages/WeddingDayGuest';
+
+const IMMERSIVE_PATHS = ['/wedding', '/wedding-day'];
 
 const PortfolioChrome: React.FC = () => {
 	const location = useLocation();
-	const isImmersivePage = location.pathname === '/wedding';
+	const isImmersivePage = IMMERSIVE_PATHS.includes(location.pathname);
 
 	return (
 		<>
@@ -20,6 +23,7 @@ const PortfolioChrome: React.FC = () => {
 				<Route path='/about' element={<About />} />
 				<Route path='/contact' element={<Contact />} />
 				<Route path='/wedding' element={<Wedding />} />
+				<Route path='/wedding-day' element={<WeddingDayGuest />} />
 			</Routes>
 
 			{!isImmersivePage && (
