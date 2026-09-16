@@ -168,8 +168,8 @@ const Wedding: React.FC = () => {
 					--muted: #7a8a99;
 					--paper: #f2f3f4;
 					--paper-deep: #c7c7c7;
-					--clay: #9b111e;
-					--clay-dark: #7c0e18;
+					--clay: #8a6d1b;
+					--clay-dark: #6e5714;
 					--gold: #556b2f;
 					--sage: #556b2f;
 					--font-display: 'Cormorant Garamond', serif;
@@ -257,7 +257,7 @@ const Wedding: React.FC = () => {
 					width: 38px;
 					height: 38px;
 					transform: translate(-50%, -50%);
-					background: var(--clay);
+					background: var(--ink);
 					border-radius: 50%;
 					display: flex;
 					align-items: center;
