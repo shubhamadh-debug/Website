@@ -9,7 +9,7 @@ const clamp = (value: number, min = 0, max = 1) => Math.min(max, Math.max(min, v
 
 const HeartMark: React.FC<{ className?: string }> = ({ className }) => (
 	<svg viewBox='0 0 24 24' className={className} fill='currentColor' aria-hidden='true'>
-		<path d='M12 21s-7.5-4.6-10.2-9.1C.2 9.1 1 5.6 4 4.3c2.2-.9 4.4 0 6 2.1 1.6-2.1 3.8-3 6-2.1 3 1.3 3.8 4.8 2.2 7.6C19.5 16.4 12 21 12 21z' />
+		<path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' />
 	</svg>
 );
 
