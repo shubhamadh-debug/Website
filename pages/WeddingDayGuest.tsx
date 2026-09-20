@@ -175,6 +175,15 @@ const WeddingDayGuest: React.FC = () => {
 					text-align: center;
 					opacity: ${hintOpacity};
 				}
+				.wi-stage-logo {
+					position: absolute;
+					top: clamp(88px, 20vh, 168px);
+					left: 50%;
+					transform: translateX(-50%);
+					width: min(46vw, 190px);
+					height: auto;
+					opacity: ${hintOpacity};
+				}
 				.wi-scene {
 					position: relative;
 					width: min(78vw, 320px);
@@ -533,6 +542,11 @@ const WeddingDayGuest: React.FC = () => {
 			<section className='wi-stage-section' ref={stageRef}>
 				<div className='wi-stage-sticky'>
 					<p className='wi-eyebrow-top'>Save the Date</p>
+					<img
+						className='wi-stage-logo'
+						src='/assets/wedding/shubh-aarambh-gold.png'
+						alt='Shubh Aarambh'
+					/>
 					<div className='wi-scene'>
 						<div className='wi-letter'>
 							<div className='wi-letter-photo' role='img' aria-label='The two of us' />
